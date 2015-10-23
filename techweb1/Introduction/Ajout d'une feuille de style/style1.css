@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+
+body {
+	background: white;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, p, ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	margin-left: 15px;
+	list-style: inside;
+}
+
+a, a:active, a:visited {
+	color: Crimson;
+}
+
+a:hover {
+	color: DarkRed;
+}
+
+#content {
+	box-sizing: border-box;
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px auto;
+	width: 800px;
+	position: relative;
+	background: radial-gradient(white, LightGray);
+}
+
+header {
+	box-sizing: border-box;
+	width: 600px;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+header h1 {
+	text-shadow: 5px 5px 3px DarkGray;
+	margin: 0px 0px 0px 0px;
+	line-height: 92px;
+	font-size: 92px;
+}
+
+header h2 {
+	color: DarkSlateGray;
+	margin: 0px;
+	font-size: 52px;
+	line-height: 52px;
+	font-style: italic;
+}
+
+#photo {
+	box-sizing: border-box;
+	text-align: center;
+	width: 200px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#photo img {
+	width: 160px;
+	border: 5px solid white;
+	outline: 1px solid black;
+	transform: rotate(10deg);
+}
+
+section {
+	margin-bottom: 15px;
+}
+
+section h2 {
+	margin-bottom: 3px;
+	font-size: 36px;
+	line-height: 36px;
+	
+}
+
+section h2:first-letter {
+	color: DarkSlateGray;
+	font-size: 140%;
+	font-family: 'Courgette', cursive;
+}
+
+footer {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0px;
+	padding-top: 5px;
+	border-top: 1px dotted DarkSlateGray;
+}
