@@ -1,0 +1,26 @@
+a {
+	color: #ff0000;
+}
+
+a:hover {
+	color: #ffffff;
+	background-color: #ff0000;
+}
+
+a:focus {
+	color: #00ff00;
+}
+
+#content p:nth-child(2n + 3) {
+	border: 1px solid grey;
+}
+
+#content p:first-child {
+	color: #266636;
+	background-color: #bbbbbb;
+	font-size: 120%;
+}
+
+#content p:first-letter {
+	font-size: 180%;
+}
