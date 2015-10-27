@@ -22,7 +22,6 @@ a:focus {
 	color: #00ff00;
 }
 
-
 @-webkit-keyframes rotating {
 	to {
 		transform: rotate(360deg);
