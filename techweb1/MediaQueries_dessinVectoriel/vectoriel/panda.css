@@ -1,0 +1,35 @@
+#panda {
+	background-color: black;
+	border: 5px solid grey;
+	-webkit-animation: rotating 5s linear infinite;
+	-moz-animation: rotating 5s linear infinite;
+	-ms-animation: rotating 5s linear infinite;
+	-o-animation: rotating 5s linear infinite;
+	animation: rotating 5s linear infinite;
+}
+
+#background{
+	fill: lightgrey;
+}
+
+#foreground {
+	fill: blue;
+	stroke: lightgrey;
+	stroke-width: 5;
+}
+
+#WWF {
+	fill: lightgrey;
+}
+
+@keyframes rotating {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(-1, 1);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}

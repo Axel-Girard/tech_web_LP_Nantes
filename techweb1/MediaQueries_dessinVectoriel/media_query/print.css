@@ -1,0 +1,49 @@
+@media print {
+	body {
+		padding: 0;
+		margin: 0;
+		font-family: 'Times new roman', Georgia, Serif;
+		font-size: 12pt;
+	}
+
+	#container {
+		line-height: 130%;
+	}
+
+	nav {
+		display:none
+	}
+
+	header {
+		padding: 20px;
+		margin: 0;
+	}
+
+	h1, h2 {
+		font-variant: small-caps;
+	}
+
+	header h1 {
+		padding: 0;
+		margin: 0;	
+	}
+
+	#content {
+		padding: 1em;
+	}
+
+	#picture {
+		margin: auto;
+		padding: 5px;
+	}
+
+	#picture img {
+		display: block;
+		margin: auto;
+		width: 200px;
+	}
+
+	footer {
+		display:none
+	}
+}
