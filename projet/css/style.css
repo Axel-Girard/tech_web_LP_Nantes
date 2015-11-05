@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+
+body {
+	background-color: darkgrey;
+	font-family: 'Courgette', sans-serif;
+}
+
+header {
+	border: 1px solid black;
+}
+
+header h1{
+	font-size: 200%;
+}
+
+footer {
+	text-align: center;
+	font-style: italic;
+	font-size: 10pt;
+}
+
+nav {
+	float: right;
+	border: 1px solid black;
+	border-top: none;
+	padding: 5px;
+	-webkit-transition: margin-left .5s;
+	-moz-transition: margin-left .5s;
+	-o-transition: margin-left .5s;
+	-ms-transition: margin-left .5s;
+	transition: margin-left .5s;
+}
+
+.onclick-menu:focus {
+	pointer-events: none;
+	outline: none;
+}
+
+.onclick-menu:focus .onclick-menu-content {
+	display: initial;
+	pointer-events: auto;
+}
+
+.onclick-menu-content {
+	z-index: 1;
+	display: none;
+}
+
+#content {
+	padding-right: 100px;
+	text-align: center;
+}
+
+#image {
+	width: 200px;
+	height: 200px;
+	background-color: #000000;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+
+#petiteImage {
+	width: 20px;
+	height: 20px;
+	background-color: #000000;
+	margin: 10px;
+}
