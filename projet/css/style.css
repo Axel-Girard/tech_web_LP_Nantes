@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Courgette);
 
 body {
-	background-color: darkgrey;
+	background-color: #bbbbbb;
 	font-family: 'Courgette', sans-serif;
 }
 
@@ -20,50 +20,91 @@ footer {
 }
 
 nav {
-	float: right;
+	float: left;
 	border: 1px solid black;
 	border-top: none;
 	padding: 5px;
-	-webkit-transition: margin-left .5s;
-	-moz-transition: margin-left .5s;
-	-o-transition: margin-left .5s;
-	-ms-transition: margin-left .5s;
-	transition: margin-left .5s;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.onclick-menu:focus {
-	pointer-events: none;
+nav p {
+		display:inline-block;
+		border-right: 1px solid black;
+		margin: 0;
+		padding: 0 5px;
+}
+
+nav .ul {
+	display: inline;
+	list-style: none;
+}
+
+nav li {
+	display:inline-block;
+	margin: 0 20px;
+}
+
+nav li:hover {
+}
+
+.menu:focus {
 	outline: none;
 }
 
-.onclick-menu:focus .onclick-menu-content {
+.menu:focus .menu-content {
 	display: initial;
-	pointer-events: auto;
 }
 
-.onclick-menu-content {
+.menu-content {
 	z-index: 1;
 	display: none;
 }
 
 #content {
-	padding-right: 100px;
+	clear: both;
 	text-align: center;
 }
 
-#image {
-	width: 200px;
-	height: 200px;
-	background-color: #000000;
-	border: 1px solid black;
-	margin: 10px;
-	padding: 10px;
-	display: inline-block;
+#content:hover .image:not(:hover){
+	-webkit-filter: grayscale(1) blur(5px);
+	-moz-filter: grayscale(1) blur(5px);
+	-ms-filter: grayscale(1) blur(5px);
+	-o-filter: grayscale(1) blur(5px);
+	filter: grayscale(1) blur(5px);
 }
 
-#petiteImage {
-	width: 20px;
-	height: 20px;
-	background-color: #000000;
-	margin: 10px;
+.image {
+	width: 320px;
+	height: 320px;
+	line-height: 320px;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+
+	-webkit-transition: all .5s linear;
+	-moz-transition: all .5s linear;
+	-ms-transition: all .5s linear;
+	-o-transition: all .5s linear;
+	transition: all .5s linear;
+}
+
+.image:hover {
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+img {
+	max-width: 300px;
+	max-height: 300px;
+	margin: auto;
+	padding: 10px;
+
+	border: 1px solid black;
+	background-color: #dddddd;
+
+	vertical-align:middle;
 }
