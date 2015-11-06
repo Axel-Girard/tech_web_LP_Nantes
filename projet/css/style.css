@@ -29,10 +29,10 @@ nav {
 }
 
 nav p {
-		display:inline-block;
-		border-right: 1px solid black;
-		margin: 0;
-		padding: 0 5px;
+	display:inline-block;
+	border-right: 1px solid black;
+	margin: 0;
+	padding: 0 5px;
 }
 
 nav .ul {
@@ -64,9 +64,10 @@ nav li:hover {
 #content {
 	clear: both;
 	text-align: center;
+	background-color: red;
 }
 
-#content:hover .image:not(:hover){
+#content:hover img:not(:hover){
 	-webkit-filter: grayscale(1) blur(5px);
 	-moz-filter: grayscale(1) blur(5px);
 	-ms-filter: grayscale(1) blur(5px);
