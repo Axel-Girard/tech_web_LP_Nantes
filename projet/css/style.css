@@ -11,6 +11,7 @@ header {
 
 header h1{
 	font-size: 200%;
+	padding-left: 10px;
 }
 
 footer {
@@ -26,12 +27,18 @@ nav {
 	padding: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
+
+	-webkit-transition: width .5s linear;
+	-moz-transition: width .5s linear;
+	-ms-transition: width .5s linear;
+	-o-transition: width .5s linear;
+	transition: width .5s linear;
 }
 
-nav p {
+nav div div {
 	display:inline-block;
 	border-right: 1px solid black;
-	margin: 0;
+	margin: 2px;
 	padding: 0 5px;
 }
 
@@ -45,19 +52,15 @@ nav li {
 	margin: 0 20px;
 }
 
-nav li:hover {
-}
-
-.menu:focus {
+.menu:hover {
 	outline: none;
 }
 
-.menu:focus .menu-content {
+.menu:hover .menu-content {
 	display: initial;
 }
 
 .menu-content {
-	z-index: 1;
 	display: none;
 }
 
@@ -124,7 +127,7 @@ img {
 
 img:hover {
 	z-index: 5;
-	box-shadow:0 0 10px black;
+	box-shadow: 0 0 10px purple;
 	padding: 0;
 	border: none;
 }

@@ -1,6 +1,6 @@
-var yourUrl = "https://www.reddit.com/r/pics/.json";
+var url = "https://www.reddit.com/r/pics/.json";
 var Httpreq = new XMLHttpRequest();
-Httpreq.open("GET", yourUrl, false);
+Httpreq.open("GET", url, false);
 Httpreq.send(null);
 var data = Httpreq.responseText;
 
