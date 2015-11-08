@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+var yourUrl = "https://www.reddit.com/r/pics/.json";
+var Httpreq = new XMLHttpRequest(); // a new request
+Httpreq.open("GET", yourUrl, false);
+Httpreq.send(null);
+var data = Httpreq.responseText;
+
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(data);
+console.log(data);
+document.getElementById("demo").innerHTML =
+  "<td><img src=" + obj.data.children[0].data.preview.images[0].source.url +
+  " alt=\"image haute\"/></td>";
+</script>
+
+</body>
+</html>

@@ -23,18 +23,37 @@
         </div>
       </nav>
 
-    <div id="content">
-      <div class="image"><a href="image/rage__by_dunklayth.png"><img src="image/rage__by_dunklayth.png" alt="image haute" /></a></div>
-      <div class="image"><a href="image/quiet_by_kuvshinov_ilya.jpg"><img src="image/quiet_by_kuvshinov_ilya.jpg" alt="image carrée" /></a></div>
-      <div class="image"><a href="image/inktober__2_by_ayane45.jpg"><img src="image/inktober__2_by_ayane45.jpg" alt="image large" /></a></div>
-      <div class="image"><a href="image/rage__by_dunklayth.png"><img src="image/rage__by_dunklayth.png" alt="image haute" /></a></div>
-      <div class="image"><a href="image/quiet_by_kuvshinov_ilya.jpg"><img src="image/quiet_by_kuvshinov_ilya.jpg" alt="image carrée" /></a></div>
-      <div class="image"><a href="image/inktober__2_by_ayane45.jpg"><img src="image/inktober__2_by_ayane45.jpg" alt="image large" /></a></div>
-    </div>
+      <div id="content">
+        <table>
+          <tr id="api">
+            <!-- se conplete avec le javascript -->
+          </tr>
+        </table>
+      </div>
 
       <footer>
         <p>Axel GIRARD projet LP SIL</p>
       </footer>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script type="text/javascript" src="scripts/recuperation.js"></script>
+      <script>
+        (function() {
+          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+          $.getJSON( flickerAPI, {
+            tags: "mount rainier",
+            tagmode: "any",
+            format: "json"
+          })
+            .done(function( data ) {
+              $.each( data.items, function( i, item ) {
+                $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+                if ( i === 3 ) {
+                  return false;
+                }
+              });
+            });
+        })();
+      </script>
     </div>
   </body>
 </html>

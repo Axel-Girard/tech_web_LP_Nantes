@@ -63,25 +63,32 @@ nav li:hover {
 
 #content {
 	clear: both;
+	margin: auto;
+	padding: 0 50px;
 	text-align: center;
-	background-color: red;
 }
 
-#content:hover img:not(:hover){
-	-webkit-filter: grayscale(1) blur(5px);
-	-moz-filter: grayscale(1) blur(5px);
-	-ms-filter: grayscale(1) blur(5px);
-	-o-filter: grayscale(1) blur(5px);
-	filter: grayscale(1) blur(5px);
+#content table {
+	margin: auto;
+	text-align: center;
 }
 
-.image {
-	width: 320px;
-	height: 320px;
-	line-height: 320px;
+#content tr {
+	text-align: center;
+}
+
+tr:hover td:not(:hover) {
+	-webkit-filter: grayscale(1) blur(2px);
+	-moz-filter: grayscale(1) blur(2px);
+	-ms-filter: grayscale(1) blur(2px);
+	-o-filter: grayscale(1) blur(2px);
+	filter: grayscale(1) blur(2px);
+}
+
+#content td {
+	margin: 0 300px 340px 20px;
+	padding: auto;
 	display: inline-block;
-	margin: 0;
-	padding: 10px;
 
 	-webkit-transition: all .5s linear;
 	-moz-transition: all .5s linear;
@@ -90,7 +97,7 @@ nav li:hover {
 	transition: all .5s linear;
 }
 
-.image:hover {
+#content td:hover {
 	-webkit-transform: scale(1.5);
 	-moz-transform: scale(1.5);
 	-ms-transform: scale(1.5);
@@ -99,13 +106,25 @@ nav li:hover {
 }
 
 img {
-	max-width: 300px;
-	max-height: 300px;
-	margin: auto;
-	padding: 10px;
-
-	border: 1px solid black;
+	position: absolute;
+	z-index: 1;
+	max-width: 250px;
+	max-height: 250px;
 	background-color: #dddddd;
+	border: 1px solid black;
+	border-radius: 2px;
 
-	vertical-align:middle;
+	-webkit-transition: padding .5s linear;
+	-moz-transition: padding .5s linear;
+	-ms-transition: padding .5s linear;
+	-o-transition: padding .5s linear;
+	transition: padding .5s linear;
+	padding: 10px;
+}
+
+img:hover {
+	z-index: 5;
+	box-shadow:0 0 10px black;
+	padding: 0;
+	border: none;
 }
