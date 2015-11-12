@@ -1,13 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(https://fonts.googleapis.com/css?family=Playball);
 
 body {
-	background-color: #bbbbbb;
-	font-family: 'Courgette', sans-serif;
+	background-color: #29241b;
+	color: #eae0c2;
+	font-family: 'Playball', 'Times new roman',  sans-serif;
 }
 
-header {
-	border: 1px solid black;
-}
 
 header h1{
 	font-size: 200%;
@@ -21,8 +19,6 @@ footer {
 
 nav {
 	float: left;
-	border: 1px solid black;
-	border-top: none;
 	padding: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -30,7 +26,6 @@ nav {
 
 nav p {
 	display:inline-block;
-	border-right: 1px solid black;
 	margin: 0;
 	padding: 0 5px;
 }
@@ -52,7 +47,7 @@ nav li:hover {
 	outline: none;
 }
 
-.menu:focus .menu-content {
+.menu:hover .menu-content {
 	display: initial;
 }
 
@@ -62,6 +57,7 @@ nav li:hover {
 }
 
 #content {
+	max-width: 75%;
 	clear: both;
 	margin: auto;
 	padding: 0 50px;
@@ -98,11 +94,11 @@ tr:hover td:not(:hover) {
 }
 
 #content td:hover {
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	-o-transform: scale(1.5);
-	transform: scale(1.5);
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
 }
 
 img {
@@ -127,4 +123,18 @@ img:hover {
 	box-shadow:0 0 10px black;
 	padding: 0;
 	border: none;
+}
+
+button {
+	-webkit-box-shadow: none 0px 1px 0px 0px;
+	box-shadow: none 0px 1px 0px 0px;
+	border-radius: 10px;
+	border: 2px solid #514841;
+	display: inline-block;
+	cursor: pointer;
+	color: #808757;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-shadow: #000000 1px 1px 1px;
+	background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
 }

@@ -16,9 +16,9 @@
         <div tabindex="0" class="menu">
           <p>Menu</p>
           <ul class="menu-content">
-              <li>Look, mom</li>
-              <li>no JavaScript!</li>
-              <li>Pretty nice, right?</li>
+              <li> <button onclick="smallPreview()"> Petit </button> </li>
+              <li> <button onclick="normalPreview()"> Moyen </button> </li>
+              <li> <button onclick="largPreview()"> Grand </button> </li>
           </ul>
         </div>
       </nav>
@@ -27,6 +27,13 @@
         <table>
           <tr id="api">
             <!-- se conplete avec le javascript -->
+            <!--  
+              <td>
+                <a href=" " >
+                  <img src="" alt="" />
+                </a>
+              </td>;
+            -->
           </tr>
         </table>
       </div>
@@ -34,26 +41,8 @@
       <footer>
         <p>Axel GIRARD projet LP SIL</p>
       </footer>
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       <script type="text/javascript" src="scripts/recuperation.js"></script>
-      <script>
-        (function() {
-          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-          $.getJSON( flickerAPI, {
-            tags: "mount rainier",
-            tagmode: "any",
-            format: "json"
-          })
-            .done(function( data ) {
-              $.each( data.items, function( i, item ) {
-                $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-                if ( i === 3 ) {
-                  return false;
-                }
-              });
-            });
-        })();
-      </script>
+      <script type="text/javascript" src="scripts/resize.js"></script>
     </div>
   </body>
 </html>
