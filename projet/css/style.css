@@ -3,6 +3,7 @@
 body {
 	background-color: #29241b;
 	color: #eae0c2;
+	text-shadow: #000000 5px 5px 1px;
 	font-family: 'Playball', 'Times new roman',  sans-serif;
 }
 
@@ -47,7 +48,7 @@ nav li:hover {
 	outline: none;
 }
 
-.menu:hover .menu-content {
+.menu:focus .menu-content {
 	display: initial;
 }
 
@@ -129,12 +130,13 @@ button {
 	-webkit-box-shadow: none 0px 1px 0px 0px;
 	box-shadow: none 0px 1px 0px 0px;
 	border-radius: 10px;
-	border: 2px solid #514841;
+	border: 1px solid #514841;
+	box-shadow: #000000 2px 2px 2px;
 	display: inline-block;
 	cursor: pointer;
 	color: #808757;
 	font-weight: bold;
 	padding: 5px 10px;
-	text-shadow: #000000 1px 1px 1px;
+	text-shadow: #000000 1px 1px 2px;
 	background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
 }
