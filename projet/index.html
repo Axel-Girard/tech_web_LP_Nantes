@@ -16,6 +16,7 @@
         <div class="menu">
           <div>></div>
           <ul class="menu-content">
+<<<<<<< HEAD
             <li>
               <div>reddit</div>
               <select>
@@ -39,6 +40,15 @@
               <div>rechercher</div>
               <input type="text" name="lastname" />
             </li>
+=======
+              <li> <button onclick="smallPreview()"> Petit </button> </li>
+              <li> <button onclick="normalPreview()"> Moyen </button> </li>
+              <li> <button onclick="largPreview()"> Grand </button> </li>
+              <li> <button onclick="populaire()"> Populaire </button> </li>
+              <li> <button onclick="nouveau()"> Nouveau </button> </li>
+              <li> <button onclick="progression()"> En progrssion </button> </li>
+              <li> <button onclick="controverse()"> Controversé </button> </li>
+>>>>>>> 8e73f005e65809e4920c188fd7ecdd391e39da11
           </ul>
         </div>
       </nav>
@@ -47,6 +57,13 @@
         <table>
           <tr id="api">
             <!-- se conplete avec le javascript -->
+            <!--  
+              <td>
+                <a href=" " >
+                  <img src="" alt="" />
+                </a>
+              </td>;
+            -->
           </tr>
         </table>
       </div>
@@ -54,26 +71,8 @@
       <footer>
         <p>Axel GIRARD projet LP SIL</p>
       </footer>
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       <script type="text/javascript" src="scripts/recuperation.js"></script>
-      <script>
-        (function() {
-          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-          $.getJSON( flickerAPI, {
-            tags: "mount rainier",
-            tagmode: "any",
-            format: "json"
-          })
-            .done(function( data ) {
-              $.each( data.items, function( i, item ) {
-                $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-                if ( i === 3 ) {
-                  return false;
-                }
-              });
-            });
-        })();
-      </script>
+      <script type="text/javascript" src="scripts/resize.js"></script>
     </div>
   </body>
 </html>
