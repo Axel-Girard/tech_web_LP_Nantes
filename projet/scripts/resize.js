@@ -1,41 +1,41 @@
 function smallPreview(){
-	var doc = document.getElementsByTagName('td');
-	for(var i = 0; i < doc.length; i++) {
-		doc[i].style.margin = '0 200px 220px 20px';
+	var image = document.getElementsByClassName('crop');
+	for(var i = 0; i < image.length; i++) {
+		image[i].style.width = "100px";
+		image[i].style.height = "100px";
 	}
 
-	var image = document.getElementsByTagName('img');
+	var image = document.getElementsByClassName('image');
 	for(var i = 0; i < image.length; i++) {
-		image[i].style.maxWidth = "180px";
-		image[i].style.maxHeight = "180px";
-		image[i].style.padding = "5px";
+		image[i].style.maxWidth = "300px";
+		image[i].style.MaxHeight = "300px";
 	}
 }
 
 function normalPreview(){
-	var doc = document.getElementsByTagName('td');
-	for(var i = 0; i < doc.length; i++) {
-		doc[i].style.margin = '0 300px 340px 20px';
+	var image = document.getElementsByClassName('crop');
+	for(var i = 0; i < image.length; i++) {
+		image[i].style.width = "300px";
+		image[i].style.height = "300px";
 	}
 
-	var image = document.getElementsByTagName('img');
+	var image = document.getElementsByClassName('image');
 	for(var i = 0; i < image.length; i++) {
-		image[i].style.maxWidth = "250px";
-		image[i].style.maxHeight = "250px";
-		image[i].style.padding = "10px";
+		image[i].style.maxWidth = "600px";
+		image[i].style.MaxHeight = "600px";
 	}
 }
 
 function largPreview(){
-	var doc = document.getElementsByTagName('td');
-	for(var i = 0; i < doc.length; i++) {
-		doc[i].style.margin = '0 600px 680px 20px';
+	var image = document.getElementsByClassName('crop');
+	for(var i = 0; i < image.length; i++) {
+		image[i].style.width = "600px";
+		image[i].style.height = "600px";
 	}
 
-	var image = document.getElementsByTagName('img');
+	var image = document.getElementsByClassName('image');
 	for(var i = 0; i < image.length; i++) {
-		image[i].style.maxWidth = "550px";
-		image[i].style.maxHeight = "550px";
-		image[i].style.padding = "20px";
+		image[i].style.maxWidth = "1200px";
+		image[i].style.MaxHeight = "1200px";
 	}
 }

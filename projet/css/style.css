@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Playball);
 
-body {
-	background-color: #29241b;
+* {
+	background-color: #251B12;
+	/*color: #5A3A22;*/
 	color: #eae0c2;
 	text-shadow: #000000 5px 5px 1px;
 	font-family: 'Playball', 'Times new roman',  sans-serif;
+	font-size: 12pt;
 }
 
 
@@ -34,27 +36,19 @@ nav {
 
 nav div div {
 	display:inline-block;
-<<<<<<< HEAD
-	border-right: 1px solid black;
-	margin: 2px;
-=======
 	margin: 0;
->>>>>>> 8e73f005e65809e4920c188fd7ecdd391e39da11
 	padding: 0 5px;
 }
 
 nav .ul {
+	margin: 0;
 	display: inline;
 	list-style: none;
 }
 
 nav li {
 	display:inline-block;
-	margin: 0 20px;
-}
-
-.menu:hover {
-	outline: none;
+	margin: 0;
 }
 
 .menu:hover .menu-content {
@@ -66,10 +60,11 @@ nav li {
 }
 
 #content {
-	max-width: 75%;
+	max-width: 80%;
 	clear: both;
 	margin: auto;
-	padding: 0 50px;
+	margin-top: 70px;
+	padding: 0;
 	text-align: center;
 }
 
@@ -91,7 +86,7 @@ tr:hover td:not(:hover) {
 }
 
 #content td {
-	margin: 0 300px 340px 20px;
+	margin: 0;
 	padding: auto;
 	display: inline-block;
 
@@ -103,48 +98,39 @@ tr:hover td:not(:hover) {
 }
 
 #content td:hover {
-	-webkit-transform: scale(2);
-	-moz-transform: scale(2);
-	-ms-transform: scale(2);
-	-o-transform: scale(2);
-	transform: scale(2);
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
 }
 
-img {
+.crop {
 	position: absolute;
-	z-index: 1;
-	max-width: 250px;
-	max-height: 250px;
-	background-color: #dddddd;
-	border: 1px solid black;
-	border-radius: 2px;
-
-	-webkit-transition: padding .5s linear;
-	-moz-transition: padding .5s linear;
-	-ms-transition: padding .5s linear;
-	-o-transition: padding .5s linear;
-	transition: padding .5s linear;
-	padding: 10px;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
 }
 
-img:hover {
+.crop .image {
+	z-index: 1;
+	max-width: 600px;
+	max-height: 600px;
+}
+
+.crop .image:hover {
 	z-index: 5;
-	box-shadow: 0 0 10px purple;
-	padding: 0;
-	border: none;
 }
 
 button {
-	-webkit-box-shadow: none 0px 1px 0px 0px;
-	box-shadow: none 0px 1px 0px 0px;
+	display: inline-block;
+	color: #251B12;
+	font-weight: bold;
+	text-shadow: none;
+	padding: 5px 10px;
 	border-radius: 10px;
 	border: 1px solid #514841;
 	box-shadow: #000000 2px 2px 2px;
-	display: inline-block;
 	cursor: pointer;
-	color: #808757;
-	font-weight: bold;
-	padding: 5px 10px;
-	text-shadow: #000000 1px 1px 2px;
 	background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
 }
