@@ -2,13 +2,11 @@
 
 * {
 	background-color: #251B12;
-	/*color: #5A3A22;*/
 	color: #eae0c2;
 	text-shadow: #000000 5px 5px 1px;
 	font-family: 'Berkshire Swash', 'Times new roman',  sans-serif;
 	font-size: 12pt;
 }
-
 
 header h1{
 	font-size: 200%;
@@ -22,8 +20,6 @@ footer {
 }
 
 nav {
-	position: fixed;
-	float: left;
 	padding: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -36,32 +32,17 @@ nav div {
 }
 
 nav ul {
-	text-align: center;
 	background-color: #20140f;
+	margin-left: 0;
 }
 
 nav li {
 	list-style: none;
 	background-color: #20140f;
-	margin-bottom: 2px;
-}
-
-nav li:nth-child(2), li:nth-child(6) {
-	text-align: left;
-	margin-left: 20px;
-}
-
-.menu:hover .menu-content {
-	display: initial;
-}
-
-.menu-content {
-	display: none;
 }
 
 #content {
 	max-width: 80%;
-	clear: both;
 	margin: auto;
 	margin-top: 70px;
 	padding: 0;
@@ -134,7 +115,6 @@ tr:hover td:not(:hover) {
 
 button {
 	color: #251B12;
-	width: 150px;
 	font-weight: bold;
 	text-shadow: none;
 	padding: 5px 10px;
@@ -145,6 +125,33 @@ button {
 	background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
 }
 
-input[type="text"] {
-    width: 100px;
+@media (min-width: 640px) {
+	nav {
+		position: fixed;
+		float: left;
+	}
+
+	#menu:hover #menu-content {
+		display: initial;
+	}
+
+	#menu-content {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	#champRecherche {
+		display: none;
+	}
+
+	.crop {
+		width: 150px;
+		height: 150px;
+	}
+
+	.crop .image {
+		max-width: 300px;
+		max-height: 300px;
+	}
 }
