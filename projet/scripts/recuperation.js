@@ -47,10 +47,12 @@ function miseEnForme(data){
 		if(obj.data.children[cptImage] !== undefined){
 			document.getElementById("api").innerHTML +=
       "<td> " +
-        "<a href=\"" + obj.data.children[cptImage].data.url + "\"> " +
+        "<a href=\"" + obj.data.children[cptImage].data.url + "\">" +
           "<div class=\"crop\"> " +
-              "<img src=\"" + obj.data.children[cptImage].data.url + "\" alt=\"balek\" " + " class=\"image\" \"> " +
-          " </div> " +
+						"<p class=\"legende\">" + obj.data.children[cptImage].data.title + "</p>" +
+            "<img src=\"" + obj.data.children[cptImage].data.url + "\" alt=\"" +
+							obj.data.children[cptImage].data.title + "\" " + " class=\"image\" \">" +
+          "</div>" +
         "</a>" +
       "</td>";
 		}
@@ -64,15 +66,19 @@ function miseEnForme(data){
   <td>
     <a href=" " >
       <div class="crop">
-        <img src="images/rage__by_dunklayth.png" alt="t" />
+				<p class="legende">t</sp>
+        <img src="images/rage__by_dunklayth.png" alt="jolie dessin de Dunklayth" />
       </div>
     </div>
     </a>
   </td>
 */
 
-function recherche(){
-	var yourUrl = "https://www.reddit.com/r/pics/search.json?q=chocolat&restrict_sr=on&sort=relevance&t=all&limit=50";
+function recherche(recherche){
+	/*var yourUrl = "https://www.reddit.com/r/pics/search.json?q=chocolat " +
+						"&restrict_sr=on&sort=relevance&t=all&limit=50";*/
+	var yourUrl = "https://www.reddit.com/r/pics/search.json?q="+ recherche +
+						"&restrict_sr=on&sort=relevance&t=all&limit=50";
 	var Httpreq = new XMLHttpRequest();
 	Httpreq.open("GET", yourUrl, false);
 	Httpreq.send(null);

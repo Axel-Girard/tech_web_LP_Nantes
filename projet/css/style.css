@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Playball);
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
 
 * {
 	background-color: #251B12;
 	/*color: #5A3A22;*/
 	color: #eae0c2;
 	text-shadow: #000000 5px 5px 1px;
-	font-family: 'Playball', 'Times new roman',  sans-serif;
+	font-family: 'Berkshire Swash', 'Times new roman',  sans-serif;
 	font-size: 12pt;
 }
 
@@ -22,33 +22,33 @@ footer {
 }
 
 nav {
+	position: fixed;
 	float: left;
 	padding: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
-
-	-webkit-transition: width .5s linear;
-	-moz-transition: width .5s linear;
-	-ms-transition: width .5s linear;
-	-o-transition: width .5s linear;
-	transition: width .5s linear;
+	background-color: #20140f;
+	z-index: 2;
 }
 
-nav div div {
-	display:inline-block;
-	margin: 0;
-	padding: 0 5px;
+nav div {
+	background-color: #20140f;
 }
 
-nav .ul {
-	margin: 0;
-	display: inline;
-	list-style: none;
+nav ul {
+	text-align: center;
+	background-color: #20140f;
 }
 
 nav li {
-	display:inline-block;
-	margin: 0;
+	list-style: none;
+	background-color: #20140f;
+	margin-bottom: 2px;
+}
+
+nav li:nth-child(2), li:nth-child(6) {
+	text-align: left;
+	margin-left: 20px;
 }
 
 .menu:hover .menu-content {
@@ -86,8 +86,10 @@ tr:hover td:not(:hover) {
 }
 
 #content td {
+	position: relative;
+	z-index: 1;
 	margin: 0;
-	padding: auto;
+	padding: 0;
 	display: inline-block;
 
 	-webkit-transition: all .5s linear;
@@ -98,6 +100,7 @@ tr:hover td:not(:hover) {
 }
 
 #content td:hover {
+	z-index: 50;
 	-webkit-transform: scale(1.5);
 	-moz-transform: scale(1.5);
 	-ms-transform: scale(1.5);
@@ -105,26 +108,33 @@ tr:hover td:not(:hover) {
 	transform: scale(1.5);
 }
 
-.crop {
+#content td .legende {
+	display: none;
 	position: absolute;
+	top: 0;
+	background-color: rgba(37, 27, 18, 0.5);
+	width: 100%;
+	z-index: 2;
+}
+
+#content td:hover .legende {
+	display: inherit;
+}
+
+.crop {
 	width: 300px;
 	height: 300px;
 	overflow: hidden;
 }
 
 .crop .image {
-	z-index: 1;
 	max-width: 600px;
 	max-height: 600px;
 }
 
-.crop .image:hover {
-	z-index: 5;
-}
-
 button {
-	display: inline-block;
 	color: #251B12;
+	width: 150px;
 	font-weight: bold;
 	text-shadow: none;
 	padding: 5px 10px;
@@ -133,4 +143,8 @@ button {
 	box-shadow: #000000 2px 2px 2px;
 	cursor: pointer;
 	background: linear-gradient(rgb(234, 224, 194) 5%, rgb(204, 194, 166) 100%) rgb(234, 224, 194);
+}
+
+input[type="text"] {
+    width: 100px;
 }

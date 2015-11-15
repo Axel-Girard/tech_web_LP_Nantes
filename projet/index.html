@@ -9,20 +9,22 @@
     <div id="container">
 
       <header>
-        <h1>Red'y'</h1>
+        <h1>Red'y</h1>
       </header>
 
       <nav>
         <div class="menu">
-          >
+          Menu
           <ul class="menu-content">
-              <li> <button onclick="recherche()"> Test </button> </li>
+              <li> Recherche : <input type="text" onchange="recherche(this.value)" /> </li>
+              <li> Taille : </li>
               <li> <button onclick="smallPreview()"> Petit </button> </li>
               <li> <button onclick="normalPreview()"> Moyen </button> </li>
               <li> <button onclick="largPreview()"> Grand </button> </li>
+              <li> Tri : </li>
               <li> <button onclick="populaire()"> Populaire </button> </li>
               <li> <button onclick="nouveau()"> Nouveau </button> </li>
-              <li> <button onclick="progression()"> En progrssion </button> </li>
+              <li> <button onclick="progression()"> En progression </button> </li>
               <li> <button onclick="controverse()"> Controversé </button> </li>
           </ul>
         </div>
@@ -37,6 +39,7 @@
               <td>
                 <a href=" " >
                   <div class="crop">
+                    <p class="legende">t</p>
                     <img src="images/rage__by_dunklayth.png" alt="t" class="image"/>
                   </div>
                 </div>
